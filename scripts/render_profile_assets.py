@@ -22,12 +22,12 @@ REGIONS = {
     "intro.png": (0, 0, 660, 260),
     "features.png": (0, 270, 1000, 415),
     "technologies.png": (0, 425, 1020, 543),
-    "portfolio-button.png": (0, 553, 570, 643),
-    "linkedin-button.png": (0, 643, 570, 733),
-    "dribbble-button.png": (645, 553, 870, 643),
-    "behance-button.png": (645, 643, 870, 733),
-    "button-divider-top.png": (570, 553, 645, 643),
-    "button-divider-bottom.png": (570, 643, 645, 733),
+    "portfolio-button.png": (0, 553, 500, 643),
+    "linkedin-button.png": (0, 643, 500, 733),
+    "dribbble-button.png": (560, 553, 785, 643),
+    "behance-button.png": (560, 643, 785, 733),
+    "button-divider-top.png": (500, 553, 560, 643),
+    "button-divider-bottom.png": (500, 643, 560, 733),
 }
 
 
