@@ -1,7 +1,7 @@
 """Build the local visual assets used by the GitHub profile README.
 
 Run from the repository root: python scripts/build_assets.py
-Requires Pillow only for the animated cat and avatar images.
+Requires Pillow only for the animated cat image.
 """
 
 from __future__ import annotations
@@ -10,7 +10,7 @@ import html
 import re
 from pathlib import Path
 
-from PIL import Image, ImageDraw
+from PIL import Image
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -115,25 +115,25 @@ def build_technologies() -> None:
 def build_contact() -> None:
     linkedin = f"""
       <defs><linearGradient id="blue" x2="1" y2="1"><stop stop-color="#267ce4"/><stop offset="1" stop-color="#1553bb"/></linearGradient></defs>
-      <rect x="3" y="8" width="397" height="69" rx="13" fill="url(#blue)"/>
-      <rect x="3" y="8" width="71" height="69" rx="13" fill="#368efa" fill-opacity=".5"/>
-      {embedded_icon('linkedin', 23, 25, 36)}
-      <text x="89" y="51" fill="#ffffff" font-family="{FONT}" font-size="17" font-weight="700">Let’s connect on LinkedIn</text>
-      <path d="M357 44h22m-7-7 7 7-7 7" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <rect x="0" y="31" width="350" height="50" rx="11" fill="url(#blue)"/>
+      <rect x="0" y="31" width="51" height="50" rx="11" fill="#368efa" fill-opacity=".5"/>
+      {embedded_icon('linkedin', 12, 42, 28)}
+      <text x="64" y="62" fill="#ffffff" font-family="{FONT}" font-size="15" font-weight="700">Let’s connect on LinkedIn</text>
+      <path d="M311 56h22m-7-7 7 7-7 7" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
     """
-    (ASSETS / "linkedin-button.svg").write_text(svg_document(405, 85, linkedin), encoding="utf-8")
+    (ASSETS / "linkedin-button.svg").write_text(svg_document(350, 90, linkedin), encoding="utf-8")
     social = f"""
-      <text x="15" y="18" fill="{MUTED}" font-family="{FONT}" font-size="15">Other places I share my work</text>
-      <rect x="15" y="32" width="248" height="46" rx="10" fill="#1d222d" stroke="#36404e"/>
-      <rect x="281" y="32" width="248" height="46" rx="10" fill="#1d222d" stroke="#36404e"/>
-      {embedded_icon('dribbble', 30, 43, 24, color='#ea4c89')}
-      {embedded_icon('behance', 296, 43, 24, color='#1769ff')}
-      <text x="66" y="61" fill="{WHITE}" font-family="{FONT}" font-size="15">Dribbble</text>
-      <text x="332" y="61" fill="{WHITE}" font-family="{FONT}" font-size="15">Behance</text>
-      <text x="174" y="61" fill="{MUTED}" font-family="{FONT}" font-size="12">Coming soon</text>
-      <text x="438" y="61" fill="{MUTED}" font-family="{FONT}" font-size="12">Coming soon</text>
+      <text x="0" y="20" fill="{MUTED}" font-family="{FONT}" font-size="14">Other places I share my work</text>
+      <rect x="0" y="31" width="220" height="50" rx="10" fill="#1d222d" stroke="#36404e"/>
+      <rect x="230" y="31" width="220" height="50" rx="10" fill="#1d222d" stroke="#36404e"/>
+      {embedded_icon('dribbble', 13, 43, 25, color='#ea4c89')}
+      {embedded_icon('behance', 243, 43, 25, color='#1769ff')}
+      <text x="48" y="62" fill="{WHITE}" font-family="{FONT}" font-size="14">Dribbble</text>
+      <text x="278" y="62" fill="{WHITE}" font-family="{FONT}" font-size="14">Behance</text>
+      <text x="137" y="62" fill="{MUTED}" font-family="{FONT}" font-size="11">Coming soon</text>
+      <text x="367" y="62" fill="{MUTED}" font-family="{FONT}" font-size="11">Coming soon</text>
     """
-    (ASSETS / "social-soon.svg").write_text(svg_document(545, 85, social), encoding="utf-8")
+    (ASSETS / "social-soon.svg").write_text(svg_document(450, 90, social), encoding="utf-8")
 
 
 def build_cat() -> None:
@@ -161,16 +161,6 @@ def build_cat() -> None:
         optimize=True,
     )
 
-    # Optional profile avatar: crop the eyes from the original drawing.
-    source.seek(0)
-    face = source.convert("RGBA").crop((350, 620, 950, 1035))
-    face.thumbnail((450, 450), Image.Resampling.LANCZOS)
-    avatar = Image.new("RGBA", (512, 512), (0, 0, 0, 255))
-    avatar.alpha_composite(face, ((512 - face.width) // 2, (512 - face.height) // 2))
-    mask = Image.new("L", (512, 512))
-    ImageDraw.Draw(mask).ellipse((8, 8, 503, 503), fill=255)
-    avatar.putalpha(mask)
-    avatar.save(ASSETS / "avatar.png", optimize=True)
 
 
 def main() -> None:
@@ -184,3 +174,4 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
+

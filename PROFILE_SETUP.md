@@ -6,7 +6,7 @@ Este repositorio contiene el README visual para el perfil de GitHub `nibedev`. T
 
 1. Crea en GitHub un repositorio **público** llamado exactamente `nibedev`, bajo la cuenta `nibedev`.
 2. Sube el contenido de esta carpeta a la rama principal de ese repositorio. GitHub mostrará automáticamente el archivo `README.md` en el perfil.
-3. En **Settings → Public profile**, configura el nombre, biografía, pronombres, sitio web y enlace de LinkedIn como prefieras. La barra lateral de la maqueta pertenece al perfil de GitHub y no se puede modificar desde el README. Se incluye `assets/avatar.png` como propuesta de avatar basada en el GIF; puedes subirlo allí si te gusta.
+3. En **Settings → Public profile**, configura el nombre, biografía, pronombres, sitio web y enlace de LinkedIn como prefieras. La barra lateral de la maqueta pertenece al perfil de GitHub y no se puede modificar desde el README. El avatar se cambia directamente allí.
 4. En **Customize your pins**, fija `Tienda-Nivel-Retro` y `Namster-Cafe` si son públicos y aparecen en tu cuenta. Las tarjetas de la maqueta son los elementos nativos de GitHub; sus nombres, descripciones y visibilidad se administran en cada repositorio.
 
 ## Actualizar el contenido
@@ -15,7 +15,7 @@ Este repositorio contiene el README visual para el perfil de GitHub `nibedev`. T
 - GIF: reemplaza `3_Gato_acostado_FINAL.gif` por otra versión con el mismo nombre y vuelve a ejecutar el script. El original se conserva; `assets/cat-animated.gif` es una versión más ligera para el perfil.
 - LinkedIn: cambia el enlace en `README.md` si tu dirección personalizada cambia.
 - Dribbble y Behance: hoy son tarjetas visuales sin enlace. Cuando existan tus perfiles, cambia estas tarjetas por enlaces reales en `README.md` y actualiza `build_contact()` en el script para quitar «Coming soon».
-- Avatar y datos de la barra lateral: cámbialos en la configuración de GitHub. El archivo `assets/avatar.png` no modifica el avatar por sí solo.
+- Avatar y datos de la barra lateral: cámbialos en la configuración de GitHub.
 - Repositorios fijados: se actualizan desde la página de perfil de GitHub, no desde el README.
 
 ## Subir los cambios

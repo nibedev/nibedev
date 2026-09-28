@@ -1,8 +1,7 @@
 <!-- Repositorio de perfil: publícalo como github.com/nibedev/nibedev. -->
 
 <p align="center">
-  <img src="./assets/intro.svg" width="650" alt="Hello, I'm nibe. A front-end developer who loves design and videogames. I create accessible and delightful web experiences, turning ideas into beautiful, functional interfaces.">
-  <img src="./assets/cat-animated.gif" width="300" alt="Animated black cat playing a videogame.">
+  <img src="./assets/intro.svg" width="580" alt="Hello, I'm nibe. A front-end developer who loves design and videogames. I create accessible and delightful web experiences, turning ideas into beautiful, functional interfaces."><img src="./assets/cat-animated.gif" width="220" alt="Animated black cat playing a videogame.">
 </p>
 
 <p align="center">
@@ -14,8 +13,7 @@
 </p>
 
 <p align="center">
-  <a href="https://www.linkedin.com/in/nibedev/" aria-label="Connect with nibe on LinkedIn"><img src="./assets/linkedin-button.svg" width="400" alt="Let's connect on LinkedIn"></a>
-  <img src="./assets/social-soon.svg" width="540" alt="Dribbble and Behance profiles coming soon; these are not active links yet.">
+  <a href="https://www.linkedin.com/in/nibedev/" aria-label="Connect with nibe on LinkedIn"><img src="./assets/linkedin-button.svg" width="350" alt="Let's connect on LinkedIn"></a><img src="./assets/social-soon.svg" width="450" alt="Dribbble and Behance profiles coming soon; these are not active links yet.">
 </p>
 
 <!-- Para actualizar el contenido y publicar el perfil: consulta PROFILE_SETUP.md. -->
