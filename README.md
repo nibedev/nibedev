@@ -13,7 +13,7 @@
 </p>
 
 <p align="center">
-  <a href="https://www.linkedin.com/in/nibedev/" aria-label="Connect with nibe on LinkedIn"><img src="./assets/linkedin-button.svg" width="350" alt="Let's connect on LinkedIn"></a><a href="https://dribbble.com/nibedev" aria-label="View nibe on Dribbble"><img src="./assets/dribbble-button.svg" width="225" alt="Dribbble profile"></a><a href="https://www.behance.net/nibedev" aria-label="View nibe on Behance"><img src="./assets/behance-button.svg" width="225" alt="Behance profile"></a>
+  <a href="https://www.linkedin.com/in/nibedev/" aria-label="Connect with nibe on LinkedIn"><img src="./assets/linkedin-button.svg" width="340" alt="Let's connect on LinkedIn"></a><img src="./assets/button-gap.svg" width="14" height="90" alt=""><a href="https://dribbble.com/nibedev" aria-label="View nibe on Dribbble"><img src="./assets/dribbble-button.svg" width="215" alt="Dribbble profile"></a><img src="./assets/button-gap.svg" width="14" height="90" alt=""><a href="https://www.behance.net/nibedev" aria-label="View nibe on Behance"><img src="./assets/behance-button.svg" width="215" alt="Behance profile"></a>
 </p>
 
 <!-- Para actualizar el contenido y publicar el perfil: consulta PROFILE_SETUP.md. -->

@@ -37,6 +37,8 @@ GitHub decide el ancho de la columna, los bordes y las tarjetas nativas. El READ
 
 - Logos de tecnologías y LinkedIn: [Devicon](https://github.com/devicons/devicon), licencia MIT en `assets/vendor/DEVICON-LICENSE.txt`.
 - Iconos lineales de las cuatro áreas: [Lucide](https://lucide.dev/), licencia ISC en `assets/vendor/LUCIDE-LICENSE.txt`.
-- Logos de AutoCAD, Dribbble y Behance: [Simple Icons](https://simpleicons.org/), licencia en `assets/vendor/SIMPLE-ICONS-LICENSE.txt`. Los nombres y marcas pertenecen a sus titulares.
+- Logos de Dribbble y Behance: [Simple Icons](https://simpleicons.org/), licencia en `assets/vendor/SIMPLE-ICONS-LICENSE.txt`. Los nombres y marcas pertenecen a sus titulares.
+
+- Símbolo de AutoCAD: silueta derivada del [logotipo de Autodesk en Wikimedia Commons](https://commons.wikimedia.org/wiki/File:AutoCad_logo.svg), con sombreado adaptado para esta tarjeta. AutoCAD es una marca de Autodesk.
 
 Los SVG originales están en `assets/vendor/`; el script los integra en las imágenes finales. Revisa las políticas de cada marca antes de emplear estos logos en otros contextos.

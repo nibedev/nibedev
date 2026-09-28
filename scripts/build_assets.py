@@ -106,7 +106,7 @@ def build_technologies() -> None:
         x = 5 + i * 99 + (12 if i >= 6 else 0)
         chunks.append(f'<rect x="{x+8}" y="5" width="72" height="72" rx="12" fill="{bg}"/>')
         chunks.append(f'<rect x="{x+8}" y="5" width="72" height="72" rx="12" fill="url(#tile)"/>')
-        chunks.append(embedded_icon(icon, x + 20, 17, 48, color=accent if icon == "autocad" else None))
+        chunks.append(embedded_icon(icon, x + (14 if icon == "autocad" else 20), 11 if icon == "autocad" else 17, 60 if icon == "autocad" else 48))
         chunks.append(f'<text x="{x+44}" y="103" text-anchor="middle" fill="{MUTED}" font-family="{FONT}" font-size="13.5">{html.escape(label)}</text>')
     chunks.append('<path d="M603 9v72" stroke="#394250" stroke-width="1.5"/>')
     (ASSETS / "technologies.svg").write_text(svg_document(1020, 118, "".join(chunks)), encoding="utf-8")
@@ -133,12 +133,13 @@ def build_contact() -> None:
         )
         content = f"""
           {heading}
-          <rect x="0" y="31" width="215" height="50" rx="10" fill="#1d222d" stroke="#36404e"/>
+          <rect x="0" y="31" width="225" height="50" rx="10" fill="#1d222d" stroke="#36404e"/>
           {embedded_icon(icon, 15, 43, 25, color=color)}
           <text x="50" y="62" fill="{WHITE}" font-family="{FONT}" font-size="15">{label}</text>
           <path d="M183 58h15m-6-6 6 6-6 6" stroke="{MUTED}" stroke-width="1.7" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
         """
         (ASSETS / f"{icon}-button.svg").write_text(svg_document(225, 90, content), encoding="utf-8")
+    (ASSETS / "button-gap.svg").write_text(svg_document(14, 90, ""), encoding="utf-8")
 
 
 def build_cat() -> None:
