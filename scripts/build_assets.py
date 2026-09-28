@@ -122,18 +122,23 @@ def build_contact() -> None:
       <path d="M311 56h22m-7-7 7 7-7 7" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
     """
     (ASSETS / "linkedin-button.svg").write_text(svg_document(350, 90, linkedin), encoding="utf-8")
-    social = f"""
-      <text x="0" y="20" fill="{MUTED}" font-family="{FONT}" font-size="14">Other places I share my work</text>
-      <rect x="0" y="31" width="220" height="50" rx="10" fill="#1d222d" stroke="#36404e"/>
-      <rect x="230" y="31" width="220" height="50" rx="10" fill="#1d222d" stroke="#36404e"/>
-      {embedded_icon('dribbble', 13, 43, 25, color='#ea4c89')}
-      {embedded_icon('behance', 243, 43, 25, color='#1769ff')}
-      <text x="48" y="62" fill="{WHITE}" font-family="{FONT}" font-size="14">Dribbble</text>
-      <text x="278" y="62" fill="{WHITE}" font-family="{FONT}" font-size="14">Behance</text>
-      <text x="137" y="62" fill="{MUTED}" font-family="{FONT}" font-size="11">Coming soon</text>
-      <text x="367" y="62" fill="{MUTED}" font-family="{FONT}" font-size="11">Coming soon</text>
-    """
-    (ASSETS / "social-soon.svg").write_text(svg_document(450, 90, social), encoding="utf-8")
+    socials = [
+        ("dribbble", "Dribbble", "#ea4c89", True),
+        ("behance", "Behance", "#1769ff", False),
+    ]
+    for icon, label, color, show_heading in socials:
+        heading = (
+            f'<text x="0" y="20" fill="{MUTED}" font-family="{FONT}" font-size="14">Other places I share my work</text>'
+            if show_heading else ""
+        )
+        content = f"""
+          {heading}
+          <rect x="0" y="31" width="215" height="50" rx="10" fill="#1d222d" stroke="#36404e"/>
+          {embedded_icon(icon, 15, 43, 25, color=color)}
+          <text x="50" y="62" fill="{WHITE}" font-family="{FONT}" font-size="15">{label}</text>
+          <path d="M183 58h15m-6-6 6 6-6 6" stroke="{MUTED}" stroke-width="1.7" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+        """
+        (ASSETS / f"{icon}-button.svg").write_text(svg_document(225, 90, content), encoding="utf-8")
 
 
 def build_cat() -> None:

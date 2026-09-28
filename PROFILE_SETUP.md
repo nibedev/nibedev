@@ -14,7 +14,7 @@ Este repositorio contiene el README visual para el perfil de GitHub `nibedev`. T
 - Textos, colores, nombres de herramientas y posiciones: edita `scripts/build_assets.py` y ejecuta `python scripts/build_assets.py` desde esta carpeta. Requiere Python 3 y Pillow (`python -m pip install Pillow`).
 - GIF: reemplaza `3_Gato_acostado_FINAL.gif` por otra versión con el mismo nombre y vuelve a ejecutar el script. El original se conserva; `assets/cat-animated.gif` es una versión más ligera para el perfil.
 - LinkedIn: cambia el enlace en `README.md` si tu dirección personalizada cambia.
-- Dribbble y Behance: hoy son tarjetas visuales sin enlace. Cuando existan tus perfiles, cambia estas tarjetas por enlaces reales en `README.md` y actualiza `build_contact()` en el script para quitar «Coming soon».
+- Dribbble y Behance: los enlaces actuales están en `README.md`. Si cambian, edita allí las URL; para modificar las tarjetas, actualiza `build_contact()` en el script.
 - Avatar y datos de la barra lateral: cámbialos en la configuración de GitHub.
 - Repositorios fijados: se actualizan desde la página de perfil de GitHub, no desde el README.
 
