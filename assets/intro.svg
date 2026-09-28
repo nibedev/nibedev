@@ -1,8 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="660" height="250" viewBox="0 0 660 250" role="img"><rect width="660" height="250" fill="#0d1117"/>
-      <text x="10" y="42" fill="#9aa7bd" font-family="Segoe UI, Arial, sans-serif" font-size="23" font-weight="600">Hello, I’m nibe</text>
-      <text x="10" y="101" fill="#e6eaf2" font-family="Segoe UI, Arial, sans-serif" font-size="42" font-weight="700">A front-end developer</text>
-      <text x="10" y="150" fill="#e6eaf2" font-family="Segoe UI, Arial, sans-serif" font-size="35" font-weight="700"><tspan>who loves </tspan><tspan fill="#f5d547">design</tspan><tspan> and </tspan><tspan fill="#f5d547">videogames.</tspan></text>
-      <path d="M11 183v50" stroke="#a5afc0" stroke-width="2"/>
-      <text x="29" y="200" fill="#9aa7bd" font-family="Segoe UI, Arial, sans-serif" font-size="17.5">I create accessible and delightful web experiences,</text>
-      <text x="29" y="225" fill="#9aa7bd" font-family="Segoe UI, Arial, sans-serif" font-size="17.5">turning ideas into beautiful, functional interfaces.</text>
-    </svg>

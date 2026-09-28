@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <style>
+    @font-face { font-family: "DM Sans"; src: url("../assets/fonts/DMSans.ttf") format("truetype"); font-weight: 100 1000; }
+    @font-face { font-family: "Instrument Serif"; src: url("../assets/fonts/InstrumentSerif-Italic.ttf") format("truetype"); font-style: italic; }
+    :root { --bg:#111415; --surface:#191d1f; --ink:#edece7; --muted:#c1c8c6; --blue:#b8d1e2; --line:#34393a; --yellow:#f5d547; }
+    * { box-sizing:border-box; }
+    html,body { margin:0; width:1020px; height:743px; overflow:hidden; background:var(--bg); color:var(--ink); }
+    body { font-family:"DM Sans",Arial,sans-serif; -webkit-font-smoothing:antialiased; }
+    .art { position:absolute; overflow:hidden; background:var(--bg); }
+    #intro { left:0; top:0; width:660px; height:250px; }
+    .hello { position:absolute; left:10px; top:19px; color:var(--muted); font-size:22px; }
+    .hero-title { position:absolute; left:7px; top:57px; font-size:43px; line-height:1.07; font-weight:600; letter-spacing:-.045em; }
+    .hero-serif { position:absolute; left:10px; top:143px; color:var(--blue); font:italic 58px/1 "Instrument Serif",Georgia,serif; }
+    .hero-foot { position:absolute; left:11px; top:216px; font-size:17px; color:var(--muted); }
+    .hero-foot .yellow { color:var(--yellow); font-weight:600; }
+    .hero-rule { position:absolute; left:10px; top:202px; width:52px; height:2px; background:var(--blue); }
+
+    #features { left:0; top:260px; width:1000px; height:145px; border-top:1px solid var(--line); border-bottom:1px solid var(--line); display:flex; }
+    .feature { width:25%; padding:17px 8px 0 10px; display:grid; grid-template-columns:40px 1fr; column-gap:9px; align-content:start; }
+    .feature svg { width:35px; height:35px; stroke:var(--blue); stroke-width:1.8; fill:none; stroke-linecap:round; stroke-linejoin:round; }
+    .feature h2 { margin:0; font-size:17px; line-height:1.33; font-weight:650; letter-spacing:-.02em; }
+    .feature p { grid-column:2; margin:14px 0 0; color:var(--muted); font-size:14px; line-height:1.47; }
+
+    #technologies { left:0; top:415px; width:1020px; height:118px; }
+    .tech { position:absolute; top:5px; width:72px; text-align:center; }
+    .tech .tile { width:64px; height:64px; margin:0 auto; display:flex; justify-content:center; align-items:center; background:#232933; border-radius:9px; }
+    .tech .tile img { width:48px; height:48px; object-fit:contain; }
+    .tech .tile img.autocad { width:54px; height:54px; }
+    .tech span { display:block; margin-top:7px; color:var(--muted); font-size:13.5px; line-height:1.25; }
+    .tech-divider { position:absolute; left:606px; top:8px; height:68px; width:1px; background:var(--line); }
+
+    .cta { height:90px; }
+    .cta-label { position:absolute; left:0; top:1px; color:var(--muted); font-size:12.5px; letter-spacing:.035em; }
+    .cta-button { position:absolute; left:0; right:0; top:31px; height:50px; display:flex; align-items:center; gap:13px; padding:0 15px; border:1px solid var(--line); border-radius:8px; background:var(--surface); font-size:15px; font-weight:600; }
+    .cta-button img { width:27px; height:27px; object-fit:contain; }
+    .cta-button .arrow { margin-left:auto; width:18px; height:18px; fill:none; stroke:var(--blue); stroke-width:1.8; stroke-linecap:round; stroke-linejoin:round; }
+    #portfolio { left:0; top:543px; width:350px; }
+    #portfolio .cta-button { background:var(--blue); color:#111b20; border-color:var(--blue); }
+    #portfolio .arrow { stroke:#111b20; }
+    #linkedin { left:360px; top:543px; width:350px; }
+    #dribbble { left:0; top:643px; width:225px; }
+    #behance { left:235px; top:643px; width:225px; }
+    #dribbble .cta-button, #behance .cta-button { font-size:14.5px; }
+  </style>
+</head>
+<body>
+  <section class="art" id="intro" aria-label="Introduction">
+    <div class="hello">Hi, I'm nibe.</div>
+    <div class="hero-title">I design and build<br>interfaces</div>
+    <div class="hero-serif">with intention.</div>
+    <div class="hero-rule"></div>
+    <div class="hero-foot">Front-end developer who loves <span class="yellow">design</span> and <span class="yellow">videogames.</span></div>
+  </section>
+
+  <section class="art" id="features" aria-label="What I do">
+    <div class="feature"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg><h2>Front-end<br>development</h2><p>Vue 3 · JavaScript<br>Modern CSS</p></div>
+    <div class="feature"><svg viewBox="0 0 24 24"><path d="M12 2 3 7v10l9 5 9-5V7l-9-5ZM3 7l9 5 9-5M12 12v10"/></svg><h2>Design<br>&amp; UI/UX</h2><p>Interfaces with care<br>and clear structure</p></div>
+    <div class="feature"><svg viewBox="0 0 24 24"><path d="m15 5 4 4M3.8 16.2 16.9 3.1a2.1 2.1 0 0 1 3 3L6.8 19.2 2 22l1.8-5.8Z"/></svg><h2>From Figma<br>to code</h2><p>Visual ideas made<br>functional</p></div>
+    <div class="feature"><svg viewBox="0 0 24 24"><path d="M6.7 5h10.6a4 4 0 0 1 4 3.6C21.5 10 22 14.5 22 16a3 3 0 0 1-5 2l-1.4-1.4a2 2 0 0 0-1.4-.6H9.8a2 2 0 0 0-1.4.6L7 18a3 3 0 0 1-5-2c0-1.5.5-6 0.7-7.4A4 4 0 0 1 6.7 5Z"/><path d="M6 11h4M8 9v4M15 12h.01M18 10h.01"/></svg><h2>Always<br>building</h2><p>New ideas, projects<br>and challenges</p></div>
+  </section>
+
+  <section class="art" id="technologies" aria-label="Technologies and tools">
+    <div class="tech" style="left:13px"><div class="tile"><img src="../assets/vendor/html5.svg"></div><span>HTML</span></div>
+    <div class="tech" style="left:112px"><div class="tile"><img src="../assets/vendor/css3.svg"></div><span>CSS</span></div>
+    <div class="tech" style="left:211px"><div class="tile"><img src="../assets/vendor/javascript.svg"></div><span>JavaScript</span></div>
+    <div class="tech" style="left:310px"><div class="tile"><img src="../assets/vendor/vuejs.svg"></div><span>Vue</span></div>
+    <div class="tech" style="left:409px"><div class="tile"><img src="../assets/vendor/vitejs.svg"></div><span>Vite</span></div>
+    <div class="tech" style="left:508px"><div class="tile"><img src="../assets/vendor/git.svg"></div><span>Git</span></div>
+    <div class="tech-divider"></div>
+    <div class="tech" style="left:619px"><div class="tile"><img src="../assets/vendor/figma.svg"></div><span>Figma</span></div>
+    <div class="tech" style="left:718px"><div class="tile"><img src="../assets/vendor/photoshop.svg"></div><span>Photoshop</span></div>
+    <div class="tech" style="left:817px"><div class="tile"><img src="../assets/vendor/illustrator.svg"></div><span>Illustrator</span></div>
+    <div class="tech" style="left:916px"><div class="tile"><img class="autocad" src="../assets/vendor/autocad.svg"></div><span>AutoCAD</span></div>
+  </section>
+
+  <section class="art cta" id="portfolio"><div class="cta-label">MY PORTFOLIO</div><div class="cta-button"><span>See my work at nibe.dev</span><svg class="arrow" viewBox="0 0 24 24"><path d="M5 19 19 5M8 5h11v11"/></svg></div></section>
+  <section class="art cta" id="linkedin"><div class="cta-label">LET'S CONNECT</div><div class="cta-button"><img src="../assets/vendor/linkedin.svg"><span>LinkedIn</span><svg class="arrow" viewBox="0 0 24 24"><path d="M4 12h16m-6-6 6 6-6 6"/></svg></div></section>
+  <section class="art cta" id="dribbble"><div class="cta-label">Other places I share my work</div><div class="cta-button"><img src="../assets/vendor/dribbble.svg"><span>Dribbble</span><svg class="arrow" viewBox="0 0 24 24"><path d="M4 12h16m-6-6 6 6-6 6"/></svg></div></section>
+  <section class="art cta" id="behance"><div class="cta-button"><img src="../assets/vendor/behance.svg"><span>Behance</span><svg class="arrow" viewBox="0 0 24 24"><path d="M4 12h16m-6-6 6 6-6 6"/></svg></div></section>
+</body>
+</html>
