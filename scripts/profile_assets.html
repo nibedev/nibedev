@@ -2,29 +2,33 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
+  <script>if (new URLSearchParams(location.search).get("theme") === "light") document.documentElement.classList.add("light");</script>
   <style>
     @font-face { font-family: "DM Sans"; src: url("../assets/fonts/DMSans.ttf") format("truetype"); font-weight: 100 1000; }
     @font-face { font-family: "Instrument Serif"; src: url("../assets/fonts/InstrumentSerif-Italic.ttf") format("truetype"); font-style: italic; }
-    :root { --bg:#111415; --surface:#191d1f; --ink:#edece7; --muted:#c1c8c6; --blue:#b8d1e2; --line:#34393a; --yellow:#f5d547; }
+    :root { --ink:#edece7; --muted:#c1c8c6; --blue:#b8d1e2; --line:#52616a; }
+    .light { --ink:#24292f; --muted:#57606a; --blue:#335d71; --line:#afb8c1; }
+    .light .tech .tile { background:#eaeef2; }
+    .light #portfolio .cta-button { background:#b8d1e2; border-color:#b8d1e2; color:#111b20; }
     * { box-sizing:border-box; }
-    html,body { margin:0; width:1020px; height:743px; overflow:hidden; background:var(--bg); color:var(--ink); }
+    html,body { margin:0; width:1020px; height:703px; overflow:hidden; background:transparent; color:var(--ink); }
     body { font-family:"DM Sans",Arial,sans-serif; -webkit-font-smoothing:antialiased; }
-    .art { position:absolute; overflow:hidden; background:var(--bg); }
-    #intro { left:0; top:0; width:660px; height:250px; }
+    .art { position:absolute; overflow:hidden; background:transparent; }
+    #intro { left:0; top:0; width:660px; height:220px; }
     .hello { position:absolute; left:10px; top:19px; color:var(--muted); font-size:22px; }
-    .hero-title { position:absolute; left:7px; top:57px; font-size:43px; line-height:1.07; font-weight:600; letter-spacing:-.045em; }
-    .hero-serif { position:absolute; left:10px; top:143px; color:var(--blue); font:italic 58px/1 "Instrument Serif",Georgia,serif; }
-    .hero-foot { position:absolute; left:11px; top:216px; font-size:17px; color:var(--muted); }
-    .hero-foot .yellow { color:var(--yellow); font-weight:600; }
-    .hero-rule { position:absolute; left:10px; top:202px; width:52px; height:2px; background:var(--blue); }
+    .hero-title { position:absolute; left:7px; top:57px; white-space:nowrap; font-size:42px; line-height:1.07; font-weight:600; letter-spacing:-.02em; word-spacing:.14em; }
+    .hero-serif { position:absolute; left:10px; top:108px; color:var(--blue); font:italic 62px/1 "Instrument Serif",Georgia,serif; }
+    .hero-foot { position:absolute; left:11px; top:175px; font-size:17px; line-height:32px; color:var(--muted); white-space:nowrap; }
+    .hero-foot em { color:var(--blue); font:italic 26px/1 "Instrument Serif",Georgia,serif; }
+    .hero-rule { position:absolute; left:10px; top:167px; width:52px; height:2px; background:var(--blue); }
 
-    #features { left:0; top:260px; width:1000px; height:145px; border-top:1px solid var(--line); border-bottom:1px solid var(--line); display:flex; }
+    #features { left:0; top:230px; width:1000px; height:145px; border-top:1px solid var(--line); border-bottom:1px solid var(--line); display:flex; }
     .feature { width:25%; padding:17px 8px 0 10px; display:grid; grid-template-columns:40px 1fr; column-gap:9px; align-content:start; }
     .feature svg { width:35px; height:35px; stroke:var(--blue); stroke-width:1.8; fill:none; stroke-linecap:round; stroke-linejoin:round; }
     .feature h2 { margin:0; font-size:17px; line-height:1.33; font-weight:650; letter-spacing:-.02em; }
     .feature p { grid-column:2; margin:14px 0 0; color:var(--muted); font-size:14px; line-height:1.47; }
 
-    #technologies { left:0; top:415px; width:1020px; height:118px; }
+    #technologies { left:0; top:385px; width:1020px; height:118px; }
     .tech { position:absolute; top:5px; width:72px; text-align:center; }
     .tech .tile { width:64px; height:64px; margin:0 auto; display:flex; justify-content:center; align-items:center; background:#232933; border-radius:9px; }
     .tech .tile img { width:48px; height:48px; object-fit:contain; }
@@ -34,25 +38,25 @@
 
     .cta { height:90px; }
     .cta-label { position:absolute; left:0; top:1px; color:var(--muted); font-size:12.5px; letter-spacing:.035em; }
-    .cta-button { position:absolute; left:0; right:0; top:31px; height:50px; display:flex; align-items:center; gap:13px; padding:0 15px; border:1px solid var(--line); border-radius:8px; background:var(--surface); font-size:15px; font-weight:600; }
+    .cta-button { position:absolute; left:0; right:0; top:31px; height:50px; display:flex; align-items:center; gap:13px; padding:0 15px; border:1px solid var(--line); border-radius:8px; background:transparent; font-size:15px; font-weight:600; }
     .cta-button img { width:27px; height:27px; object-fit:contain; }
     .cta-button .arrow { margin-left:auto; width:18px; height:18px; fill:none; stroke:var(--blue); stroke-width:1.8; stroke-linecap:round; stroke-linejoin:round; }
-    #portfolio { left:0; top:543px; width:350px; }
+    #portfolio { left:0; top:513px; width:570px; }
     #portfolio .cta-button { background:var(--blue); color:#111b20; border-color:var(--blue); }
     #portfolio .arrow { stroke:#111b20; }
-    #linkedin { left:360px; top:543px; width:350px; }
-    #dribbble { left:0; top:643px; width:225px; }
-    #behance { left:235px; top:643px; width:225px; }
+    #linkedin { left:0; top:603px; width:570px; }
+    #dribbble { left:600px; top:513px; width:225px; }
+    #behance { left:600px; top:603px; width:225px; }
     #dribbble .cta-button, #behance .cta-button { font-size:14.5px; }
   </style>
 </head>
 <body>
   <section class="art" id="intro" aria-label="Introduction">
     <div class="hello">Hi, I'm nibe.</div>
-    <div class="hero-title">I design and build<br>interfaces</div>
+    <div class="hero-title">I design and build interfaces</div>
     <div class="hero-serif">with intention.</div>
     <div class="hero-rule"></div>
-    <div class="hero-foot">Front-end developer who loves <span class="yellow">design</span> and <span class="yellow">videogames.</span></div>
+    <div class="hero-foot">Front-end developer who loves <em>design</em> and <em>videogames.</em></div>
   </section>
 
   <section class="art" id="features" aria-label="What I do">
@@ -76,6 +80,7 @@
     <div class="tech" style="left:916px"><div class="tile"><img class="autocad" src="../assets/vendor/autocad.svg"></div><span>AutoCAD</span></div>
   </section>
 
+  <div class="art" id="divider" style="left:578px;top:513px;width:14px;height:180px"><div style="position:absolute;left:6px;top:8px;width:2px;height:164px;background:var(--blue)"></div></div>
   <section class="art cta" id="portfolio"><div class="cta-label">MY PORTFOLIO</div><div class="cta-button"><span>See my work at nibe.dev</span><svg class="arrow" viewBox="0 0 24 24"><path d="M5 19 19 5M8 5h11v11"/></svg></div></section>
   <section class="art cta" id="linkedin"><div class="cta-label">LET'S CONNECT</div><div class="cta-button"><img src="../assets/vendor/linkedin.svg"><span>LinkedIn</span><svg class="arrow" viewBox="0 0 24 24"><path d="M4 12h16m-6-6 6 6-6 6"/></svg></div></section>
   <section class="art cta" id="dribbble"><div class="cta-label">Other places I share my work</div><div class="cta-button"><img src="../assets/vendor/dribbble.svg"><span>Dribbble</span><svg class="arrow" viewBox="0 0 24 24"><path d="M4 12h16m-6-6 6 6-6 6"/></svg></div></section>
