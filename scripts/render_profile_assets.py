@@ -16,18 +16,18 @@ ROOT = Path(__file__).resolve().parents[1]
 SOURCE = ROOT / "scripts" / "profile_assets.html"
 EDGE = Path(r"C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe")
 SCALE = 2
-WINDOW = (1020, 703)
+WINDOW = (1020, 743)
 
 REGIONS = {
-    "intro.png": (0, 0, 660, 220),
-    "features.png": (0, 230, 1000, 375),
-    "technologies.png": (0, 385, 1020, 503),
-    "portfolio-button.png": (0, 513, 570, 603),
-    "linkedin-button.png": (0, 603, 570, 693),
-    "dribbble-button.png": (600, 513, 825, 603),
-    "behance-button.png": (600, 603, 825, 693),
-    "button-divider-top.png": (578, 513, 592, 603),
-    "button-divider-bottom.png": (578, 603, 592, 693),
+    "intro.png": (0, 0, 660, 260),
+    "features.png": (0, 270, 1000, 415),
+    "technologies.png": (0, 425, 1020, 543),
+    "portfolio-button.png": (0, 553, 570, 643),
+    "linkedin-button.png": (0, 643, 570, 733),
+    "dribbble-button.png": (645, 553, 870, 643),
+    "behance-button.png": (645, 643, 870, 733),
+    "button-divider-top.png": (570, 553, 645, 643),
+    "button-divider-bottom.png": (570, 643, 645, 733),
 }
 
 
