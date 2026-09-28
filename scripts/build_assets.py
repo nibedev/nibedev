@@ -88,24 +88,21 @@ def build_features() -> None:
 
 def build_technologies() -> None:
     items = [
-        ("HTML", "html5", "#612016", "#e44d26"),
-        ("CSS", "css3", "#0a315e", "#1572b6"),
-        ("JavaScript", "javascript", "#504411", "#f7df1e"),
-        ("Vue", "vuejs", "#202a38", "#41b883"),
-        ("Vite", "vitejs", "#24243a", "#8d56e7"),
-        ("Git", "git", "#4a2024", "#f05032"),
-        ("Figma", "figma", "#242731", "#ee5f54"),
-        ("Photoshop", "photoshop", "#09213a", "#31a8ff"),
-        ("Illustrator", "illustrator", "#311908", "#ff9a00"),
-        ("AutoCAD", "autocad", "#2a242d", "#e04444"),
+        ("HTML", "html5"),
+        ("CSS", "css3"),
+        ("JavaScript", "javascript"),
+        ("Vue", "vuejs"),
+        ("Vite", "vitejs"),
+        ("Git", "git"),
+        ("Figma", "figma"),
+        ("Photoshop", "photoshop"),
+        ("Illustrator", "illustrator"),
+        ("AutoCAD", "autocad"),
     ]
-    chunks = [
-        '<defs><linearGradient id="tile" x2="1" y2="1"><stop stop-color="#ffffff" stop-opacity=".08"/><stop offset="1" stop-color="#000000" stop-opacity=".12"/></linearGradient></defs>'
-    ]
-    for i, (label, icon, bg, accent) in enumerate(items):
+    chunks = []
+    for i, (label, icon) in enumerate(items):
         x = 5 + i * 99 + (12 if i >= 6 else 0)
-        chunks.append(f'<rect x="{x+8}" y="5" width="72" height="72" rx="12" fill="{bg}"/>')
-        chunks.append(f'<rect x="{x+8}" y="5" width="72" height="72" rx="12" fill="url(#tile)"/>')
+        chunks.append(f'<rect x="{x+8}" y="5" width="72" height="72" rx="12" fill="#2B303A"/>')
         chunks.append(embedded_icon(icon, x + (14 if icon == "autocad" else 20), 11 if icon == "autocad" else 17, 60 if icon == "autocad" else 48))
         chunks.append(f'<text x="{x+44}" y="103" text-anchor="middle" fill="{MUTED}" font-family="{FONT}" font-size="13.5">{html.escape(label)}</text>')
     chunks.append('<path d="M603 9v72" stroke="#394250" stroke-width="1.5"/>')
